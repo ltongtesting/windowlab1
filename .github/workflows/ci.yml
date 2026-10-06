@@ -21,11 +21,11 @@ jobs:
 
       - name: Restore NuGet Dependencies
         run: dotnet restore
-        shell: pwsh
+        shell: powershell
 
       - name: Build Application Structure
         run: dotnet build --configuration Release --no-restore
-        shell: pwsh
+        shell: powershell
 
       - name: Execute xUnit Tests and Calculate Coverage
         run: |
@@ -33,4 +33,4 @@ jobs:
             /p:CollectCoverage=true `
             /p:CoverletOutputFormat=opencover `
             /p:CoverletOutput=".\TestResults\coverage.opencover.xml"
-        shell: pwsh
+        shell: powershell

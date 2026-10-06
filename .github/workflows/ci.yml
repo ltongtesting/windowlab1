@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: [self-hosted, windows, dotnet-lab]
+    runs-on: [self-hosted, windows, ltvm10]
 
     steps:
       - name: Extract Source Code
